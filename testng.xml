@@ -7,8 +7,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
+	    
+	<class name="testCases.SignIn"/>
       <class name="testCases.AddToCart"/>
-      <class name="testCases.SignIn"/>
       <class name="testCases.SignOut"/>
     </classes>
   </test> <!-- Test -->
