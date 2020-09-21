@@ -32,7 +32,7 @@ public class FatchExcelData {
 			for(int j=0;j<sheet.getRow(0).getLastCellNum();j++){
 				Cell c=r.getCell(j);
 				try {
-					if(c.getCellType()== CellType.STRING) {
+					if(c.getCellTypeEnum() == CellType.STRING) {
 						data[i][j] = c.getStringCellValue();
 					}else {
 						data[i][j] = String.valueOf(c.getNumericCellValue());
