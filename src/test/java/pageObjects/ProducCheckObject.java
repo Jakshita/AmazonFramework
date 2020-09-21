@@ -22,33 +22,24 @@ public static AndroidDriver<AndroidElement> driver;
 	public static MobileElement getAddToCart() {
 		return addToCart;
 	}
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Mi TV 4X 163.9 cm (65 Inches) 4K Ultra HD Android LED TV (Black)']")
+	@AndroidFindBy(className="android.widget.TextView")
 	private static MobileElement product;
 	public static MobileElement getProduct() {
 		return product;
 	}
-	@AndroidFindBy(xpath="//android.view.View[@text='Mi TV 4X 163.9 cm (65 Inches) 4K Ultra HD Android LED TV (Black)']")
+	@AndroidFindBy(className="android.view.View")
 	private static MobileElement name;
 	public static MobileElement getName() {
 		return name;
 	}
-	@AndroidFindBy(xpath="//android.widget.EditText[@text='rupees 54,999']")
+	@AndroidFindBy(className="android.widget.EditText")
 	private static MobileElement price;
 	public static MobileElement getPrice() {
 		return price;
 	}
-	@AndroidFindBy(xpath="//android.widget.Button[@text=' Size name: 65 Inches ']")
+	@AndroidFindBy(className="android.widget.Button")
 	private static MobileElement size;
 	public static MobileElement getSize() {
 		return size;
 	}
 }
-
-
-
-
-
-
-
-
-
