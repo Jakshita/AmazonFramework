@@ -17,7 +17,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public class ExtentReporterNG {
+public class ExtentReporterNG implements IReporter{
 
     private ExtentReports extent;
     ExtentHtmlReporter htmlReporter;
