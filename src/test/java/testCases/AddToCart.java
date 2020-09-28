@@ -45,7 +45,7 @@ public class AddToCart extends Base {
 			return FatchExcelData.excelData(System.getProperty("user.dir")+"\\programData.xlsx","Sheet2");
 		}
 		@Test(priority=1 ,dataProvider="getProductSearch")
-		public void selectProduct(String s,String s1) throws IOException, InterruptedException {
+		public void selectProduct(String s) throws IOException, InterruptedException {
 			services = startServer();
 			AndroidDriver<AndroidElement> driver=Capabilities();
 			AddToCartObject add =new AddToCartObject(driver);
@@ -56,7 +56,6 @@ public class AddToCart extends Base {
 			driver.getKeyboard().sendKeys(Keys.ENTER);
 			log.info("product is searching");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			Utility.getScrollTo(driver, s1);
 			Utility.getWaitDriver(driver).until(ExpectedConditions.presenceOfElementLocated(AddToCartObject.searchPage));//wait until scroll to certain object
 			List<MobileElement> prodlist = AddToCartObject.getProductList();//get the list of the diff. products
 			Utility.getRandomElement(prodlist).click();//sending command to the random search from the list.
